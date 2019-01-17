@@ -26,9 +26,9 @@ namespace PicDB
         /// <param name="ID">PhotographerID</param>
         public void DeletePhotographer(int ID)
         {
+            SqlConnection connection = Connection;
             try
             {
-                SqlConnection connection = Connection;
                 connection.Open();
 
                 string sqlstring = "DELETE FROM Photographer WHERE PhotographerID = @Id";
@@ -36,13 +36,15 @@ namespace PicDB
 
                 command.Parameters.Add(new SqlParameter("@Id", $"{ID}"));
                 command.ExecuteNonQuery();
-                connection.Close();
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw e;
             }   
+            finally
+            {
+                connection.Close();
+            }
         }
 
         /// <summary>
@@ -51,9 +53,9 @@ namespace PicDB
         /// <param name="ID">PictureID</param>
         public void DeletePicture(int ID)
         {
+            SqlConnection connection = Connection;
             try
             {
-                SqlConnection connection = Connection;
                 connection.Open();
 
                 string sqlstring = "DELETE FROM Picture WHERE PictureID = @Id";
@@ -61,12 +63,14 @@ namespace PicDB
 
                 command.Parameters.Add(new SqlParameter("@Id", $"{ID}"));
                 command.ExecuteNonQuery();
-                connection.Close();
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw e;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -77,9 +81,9 @@ namespace PicDB
         /// <returns></returns>
         public ICameraModel GetCamera(int ID)
         {
+            SqlConnection connection = Connection;
             try
             {
-                SqlConnection connection = Connection;
                 connection.Open();
 
                 string sqlstring = "SELECT * FROM Camera WHERE CameraID = @Id";
@@ -101,13 +105,15 @@ namespace PicDB
                     result.ISOLimitGood = reader.GetInt32(5);
                     result.ISOLimitAcceptable = reader.GetInt32(6);
                 }
-                connection.Close();
                 return result;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw e;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -117,9 +123,9 @@ namespace PicDB
         /// <returns></returns>
         public IEnumerable<ICameraModel> GetCameras()
         {
+            SqlConnection connection = Connection;
             try
             {
-                SqlConnection connection = Connection;
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("SelectAllCameras", connection) { CommandType = CommandType.StoredProcedure };
@@ -142,13 +148,15 @@ namespace PicDB
 
                     ResultList.Add(result);
                 }
-                connection.Close();
                 return ResultList;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw e;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -159,9 +167,9 @@ namespace PicDB
         /// <returns></returns>
         public IPhotographerModel GetPhotographer(int ID)
         {
+            SqlConnection connection = Connection;
             try
             {
-                SqlConnection connection = Connection;
                 connection.Open();
 
                 string sqlstring = "SELECT * FROM Photographer WHERE PhotographerID = @Id";
@@ -181,13 +189,15 @@ namespace PicDB
                     result.BirthDay = reader.GetDateTime(3);
                     result.Notes = reader.GetString(4);
                 }
-                connection.Close();
                 return result;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw e;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -197,9 +207,9 @@ namespace PicDB
         /// <returns></returns>
         public IEnumerable<IPhotographerModel> GetPhotographers()
         {
+            SqlConnection connection = Connection;
             try
             {
-                SqlConnection connection = Connection;
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("SelectAllPhotographers", connection) { CommandType = CommandType.StoredProcedure };
@@ -220,13 +230,15 @@ namespace PicDB
 
                     ResultList.Add(result);
                 }
-                connection.Close();
                 return ResultList;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw e;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -237,9 +249,9 @@ namespace PicDB
         /// <returns>Picture with PictureID</returns>
         public IPictureModel GetPicture(int ID)
         {
+            SqlConnection connection = Connection;
             try
             {
-                SqlConnection connection = Connection;
                 connection.Open();
 
                 string sqlstring = "SELECT * FROM Photographer WHERE PhotographerID = @Id";
@@ -267,13 +279,15 @@ namespace PicDB
                     result.IPTC.Caption = reader.GetString(11);
                     result.Camera = GetCamera(ID);
                 }
-                connection.Close();
                 return result;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw e;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -283,9 +297,9 @@ namespace PicDB
         /// <returns>Pictures with given parameters</returns>
         public IEnumerable<IPictureModel> GetPictures(string namePart, IPhotographerModel photographerParts, IIPTCModel iptcParts, IEXIFModel exifParts)
         {
+            SqlConnection connection = Connection;
             try
             {
-                SqlConnection connection = Connection;
                 connection.Open();
 
                 List<PictureModel> ResultList = new List<PictureModel>();
@@ -344,13 +358,15 @@ namespace PicDB
                         ResultList.Add(result);
                     }
                 }
-                connection.Close();
                 return ResultList;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw e;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -360,9 +376,9 @@ namespace PicDB
         /// <param name="picture">Picturemodel</param>
         public void EditIPTC(IPictureModel picture)
         {
+            SqlConnection connection = Connection;
             try
             {
-                SqlConnection connection = Connection;
                 connection.Open();
                 SqlCommand command = new SqlCommand("EditIPTC", connection) { CommandType = CommandType.StoredProcedure };
 
@@ -374,12 +390,14 @@ namespace PicDB
                 command.Parameters.Add(new SqlParameter("@FileName", $"{picture.FileName}"));
 
                 command.ExecuteNonQuery();
-                connection.Close();
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw e;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -389,9 +407,9 @@ namespace PicDB
         /// <param name="picture">picture</param>
         public void SetPhotographer(IPictureModel picture, IPhotographerModel photographer)
         {
+            SqlConnection connection = Connection;
             try
             {
-                SqlConnection connection = Connection;
                 connection.Open();
                 SqlCommand command = new SqlCommand("SetPhotographer", connection) { CommandType = CommandType.StoredProcedure };
 
@@ -399,20 +417,22 @@ namespace PicDB
                 command.Parameters.Add(new SqlParameter("@FK_Photographer_PictureID", $"{photographer.ID}"));
 
                 command.ExecuteNonQuery();
-                connection.Close();
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw e;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
         public IPhotographerModel SelectSetPhotographer(IPictureModel picture)
         {
+            SqlConnection connection = Connection;
             try
             {
-                SqlConnection connection = Connection;
                 connection.Open();
                 SqlCommand command = new SqlCommand("SelectSetPhotographer", connection) { CommandType = CommandType.StoredProcedure };
 
@@ -430,13 +450,15 @@ namespace PicDB
                     result.BirthDay = reader.GetDateTime(3);
                     result.Notes = reader.GetString(4);
                 }
-                connection.Close();
                 return result;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw e;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -446,9 +468,9 @@ namespace PicDB
         /// <param name="picture">picture</param>
         public void Save(IPictureModel picture)
         {
+            SqlConnection connection = Connection;
             try
             {
-                SqlConnection connection = Connection;
                 connection.Open();
                 SqlCommand command = new SqlCommand("SavePicture", connection) { CommandType = CommandType.StoredProcedure };
 
@@ -465,12 +487,14 @@ namespace PicDB
                 command.Parameters.Add(new SqlParameter("@Caption", $"{picture.IPTC.Caption}"));
 
                 command.ExecuteNonQuery();
-                connection.Close();
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw e;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -480,9 +504,9 @@ namespace PicDB
         /// <param name="photographer"></param>
         public void Save(IPhotographerModel photographer)
         {
+            SqlConnection connection = Connection;
             try
             {
-                SqlConnection connection = Connection;
                 connection.Open();
                 SqlCommand command = new SqlCommand("SavePhotographer", connection) { CommandType = CommandType.StoredProcedure };
 
@@ -493,12 +517,14 @@ namespace PicDB
                 command.Parameters.Add(new SqlParameter("@Notes", $"{photographer.Notes}"));
 
                 command.ExecuteNonQuery();
-                connection.Close();
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw e;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -508,9 +534,9 @@ namespace PicDB
         /// <param name="photographer">photographer</param>
         public void EditPhotographer(IPhotographerModel photographer)
         {
+            SqlConnection connection = Connection;
             try
             {
-                SqlConnection connection = Connection;
                 connection.Open();
                 SqlCommand command = new SqlCommand("EditPhotographer", connection) { CommandType = CommandType.StoredProcedure };
 
@@ -521,12 +547,14 @@ namespace PicDB
                 command.Parameters.Add(new SqlParameter("@ID", $"{photographer.ID}"));
 
                 command.ExecuteNonQuery();
-                connection.Close();
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                throw e;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
     }

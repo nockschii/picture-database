@@ -16,3 +16,13 @@ C:\Users\Ralph\Desktop\SWE\Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.In
 C:\Users\Ralph\Desktop\SWE\Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.dll
 C:\Users\Ralph\Desktop\SWE\Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.pdb
 C:\Users\Ralph\Desktop\SWE\Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.csprojAssemblyReference.cache
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.Interfaces\bin\Debug\BIF-SWE2.Interfaces.dll
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.Interfaces\bin\Debug\BIF-SWE2.Interfaces.pdb
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.csprojAssemblyReference.cache
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.dll
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.pdb
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.Interfaces\bin\Debug\nunit.framework.dll
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.Interfaces\bin\Debug\nunit.framework.pdb
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.Interfaces\bin\Debug\nunit.framework.xml
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.csproj.CopyComplete

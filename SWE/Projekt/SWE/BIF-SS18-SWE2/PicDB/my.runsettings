@@ -6,7 +6,7 @@
 	<!-- <Parameter name="targetpath" value="C:\Users\Alfred\Desktop\SWE_Projekt\SWE\BIF-SS18-SWE2\deploy" /> --> 
 	
 	<!-- LAPTOP -->
-    <Parameter name="targetpath" value="C:\Users\Ralph\Desktop\SWE\Projekt\SWE\BIF-SS18-SWE2\deploy" />
+    <Parameter name="targetpath" value="C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SS18-SWE2\deploy" />
 	
   </TestRunParameters>
 </RunSettings>

@@ -24,3 +24,12 @@ C:\Users\Ralph\Desktop\SWE\Projekt\SWE\BIF-SWE2.UnitTests\obj\Debug\BIF-SWE2.Uni
 C:\Users\Ralph\Desktop\SWE\Projekt\SWE\BIF-SWE2.UnitTests\obj\Debug\BIF-SWE2.UnitTests.pdb
 C:\Users\Ralph\Desktop\SWE\Projekt\BIF-SWE2.UnitTests.dll
 C:\Users\Ralph\Desktop\SWE\Projekt\BIF-SWE2.UnitTests.pdb
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.UnitTests\obj\Debug\BIF-SWE2.UnitTests.csprojAssemblyReference.cache
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.UnitTests\obj\Debug\BIF.SWE2.UnitTests.Properties.Resources.resources
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.UnitTests\obj\Debug\BIF-SWE2.UnitTests.csproj.GenerateResource.cache
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.UnitTests\obj\Debug\BIF-SWE2.UnitTests.csproj.CoreCompileInputs.cache
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.UnitTests\obj\Debug\BIF-SWE2.UnitTests.csproj.CopyComplete
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.UnitTests\obj\Debug\BIF-SWE2.UnitTests.dll
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SWE2.UnitTests\obj\Debug\BIF-SWE2.UnitTests.pdb
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\BIF-SWE2.UnitTests.dll
+C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\BIF-SWE2.UnitTests.pdb
