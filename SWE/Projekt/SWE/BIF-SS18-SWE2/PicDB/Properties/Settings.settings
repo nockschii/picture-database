@@ -15,13 +15,16 @@
       <Value Profile="(Default)">RALPHSBOOK</Value>
     </Setting>
     <Setting Name="FilePath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\Ralph\Desktop\SWE\Projekt\SWE\BIF-SS18-SWE2\deploy\Pictures</Value>
+      <Value Profile="(Default)">C:\Users\Ralph\Desktop\PictureDatabase\PictureDB\SWE\Projekt\SWE\BIF-SS18-SWE2\deploy\Pictures</Value>
     </Setting>
     <Setting Name="ServernamePC" Type="System.String" Scope="User">
       <Value Profile="(Default)">DESKTOP-COE4AJM</Value>
     </Setting>
     <Setting Name="FilePathPC" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Users\Alfred\Desktop\SWE_Projekt\SWE\BIF-SS18-SWE2\deploy\Pictures</Value>
+    </Setting>
+    <Setting Name="ConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>
