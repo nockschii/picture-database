@@ -1,0 +1,149 @@
+﻿<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="PicDB" xmlns:ViewModel="clr-namespace:PicDB.ViewModel"
+        xmlns:local1="clr-namespace:PicDB" mc:Ignorable="d" x:Class="PicDB.MainWindow"
+        Title="PicDB" Height="700" Width="800">
+    
+    <Window.DataContext>
+        <ViewModel:MainWindowViewModel/>
+
+    </Window.DataContext>
+    <Border Padding="0 0 0 10">
+        <StackPanel>       
+            <!--    Menu on top    -->
+            <Menu Height="20" Background="#FFA9D1F4">
+                <Menu.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <DockPanel HorizontalAlignment="Stretch"/>
+                    </ItemsPanelTemplate>
+                </Menu.ItemsPanel>
+
+                <!--File-->
+                <MenuItem Header="File">
+                    <MenuItem Header="Create report from current picture" Command="{Binding CurrentPicture.NewReport_command}"/>
+                    <MenuItem Header="Create report with all tags" Command="{Binding List.AllTags_command}"/>
+                    <MenuItem Header="Exit" Command="Close"/>
+                </MenuItem>
+            </Menu>
+
+            <!--    Search  -->
+            <TextBox Text="{Binding Search.SearchText}" Margin="100 5 100 5"/>
+            <Button Height="20" Width="150" Command="{Binding Search.Search_command}">Search</Button>
+
+            <!--    Below Menu  -->
+            <Grid Margin="10 10 10 10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--Image-->
+                <Image Source="{Binding CurrentPicture.FilePath}" Grid.Column="0" Height="350"/>
+                <!--<Image Source="C:/Users/Alfred/Desktop/SWE_Projekt/SWE/BIF-SS18-SWE2/deploy/Pictures/Img1.jpg" Grid.Column="0" Height="350"/>-->
+
+                <!--IPTC | EXIF | Photographer -->
+                <TabControl Grid.Column="1">
+                    <!--IPTC-->
+                    <TabItem Header="IPTC">
+                        <StackPanel Margin="5 5 5 5">
+                            <!--Keywords-->
+                            <TextBlock Text="Keywords" />
+                            <TextBox Text="{Binding CurrentPicture.IPTC.Keywords}" Padding="2"/>
+                            <!--ByLine-->
+                            <TextBlock Text="ByLine" />
+                            <TextBox Text="{Binding CurrentPicture.IPTC.ByLine}" Padding="2"/>
+                            <!--Keywords-->
+                            <TextBlock Text="CopyrightNotice" />
+                            <TextBox Text="{Binding CurrentPicture.IPTC.CopyrightNotice}" Padding="2"/>
+                            <!--Keywords-->
+                            <TextBlock Text="Headline" />
+                            <TextBox Text="{Binding CurrentPicture.IPTC.Headline}" Padding="2"/>
+                            <!--Keywords-->
+                            <TextBlock Text="Caption" />
+                            <TextBox Text="{Binding CurrentPicture.IPTC.Caption}" Padding="2"/>
+                            <Button Width="150" Height="25" Margin="40" Command="{Binding CurrentPicture.EditIPTC_command}">Edit</Button>
+                        </StackPanel>
+                    </TabItem>
+                    <!--EXIF-->
+                    <TabItem Header="EXIF">
+                        <StackPanel Margin="5 5 5 5">
+                            <!--Make-->
+                            <TextBlock Text="Make" />
+                            <TextBox Text="{Binding CurrentPicture.EXIF.Make}" Padding="2" IsReadOnly="True"/>
+                            <!--FNumber-->
+                            <TextBlock Text="FNumber" />
+                            <TextBox Text="{Binding CurrentPicture.EXIF.FNumber}" Padding="2" IsReadOnly="True"/>
+                            <!--ExposureTime-->
+                            <TextBlock Text="ExposureTime" />
+                            <TextBox Text="{Binding CurrentPicture.EXIF.ExposureTime}" Padding="2" IsReadOnly="True"/>
+                            <!--ISOValue-->
+                            <TextBlock Text="ISOValue" />
+                            <TextBox Text="{Binding CurrentPicture.EXIF.ISOValue}" Padding="2" IsReadOnly="True"/>
+                            <!--Flash-->
+                            <TextBlock Text="Flash" />
+                            <TextBox Text="{Binding CurrentPicture.EXIF.Flash}" Padding="2" IsReadOnly="True"/>
+                        </StackPanel>
+                    </TabItem>
+                    <!--Photographer-->
+                    <TabItem Header="Photographer">
+                        <StackPanel Margin="5 5 5 5">
+                            <!--Photographerlist-->
+                            <ComboBox ItemsSource="{Binding PhotographerList.List}" SelectedItem="{Binding CurrentPhotographer}" DisplayMemberPath="FullName"></ComboBox>
+                            <!--<Button Margin="180 5 15 0" Width="40">select</Button>-->
+                            <!--Make-->
+                            <TextBlock Text="Firstname" />
+                            <TextBox Text="{Binding CurrentPhotographer.FirstName}" Padding="2"/>
+                            <!--FNumber-->
+                            <TextBlock Text="Lastname" />
+                            <TextBox Text="{Binding CurrentPhotographer.LastName}" Padding="2"/>
+                            <!--ExposureTime-->
+                            <TextBlock Text="Birthday" />
+                            <TextBox Text="{Binding CurrentPhotographer.BirthDay}" Padding="2"/>
+                            <!--ISOValue-->
+                            <TextBlock Text="Notes" />
+                            <TextBox Text="{Binding CurrentPhotographer.Notes}" Padding="2"/>
+                            <Button Margin="15 15 15 15" Command="{Binding CurrentPhotographer.EditPhotographer_command}">Edit Photographer</Button>
+
+                            <Border Margin="5 5 5 5" BorderBrush="Gray" BorderThickness="1"/>
+                            <TextBlock>Selected Picture (by Photographer)</TextBlock>
+                            <TextBlock Text="{Binding CurrentPicture.DisplayName}"/>
+                                <!--<TextBox Text="{Binding GetPhotographer_command}"/>-->
+                            <Button Margin="15 15 15 15" Command="{Binding SetPhotographer_command}" Content="Set Photographer to Picture" RenderTransformOrigin="0.434,1.4">
+                                <!-- <Button.CommandParameter>
+                                    <MultiBinding Converter="{StaticResource MyConverter}">
+                                        <Binding Path="CurrentPicture"/>
+                                        <Binding Path="CurrentPhotographer"/>
+                                    </MultiBinding>
+                                </Button.CommandParameter> -->
+                            </Button>
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+            <!-- Thumbnails -->
+            <ListBox ItemsSource="{Binding List.List, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding CurrentPicture}" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.CanContentScroll="False" ScrollViewer.HorizontalScrollBarVisibility="Auto" Height="200" Margin="1,0,-1,0">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="4*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Image Height="100" Width="150" Grid.Row="0" Source="{Binding FilePath}" Stretch="Fill"></Image>
+                            <TextBlock Grid.Row="1" Text="{Binding FileName}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </Border>
+</Window>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings>
+  <TestRunParameters>
+	
+	<!-- COMPUTER -->
+	<!-- <Parameter name="targetpath" value="C:\Users\Alfred\Desktop\SWE_Projekt\SWE\BIF-SS18-SWE2\deploy" /> --> 
+	
+	<!-- LAPTOP -->
+    <Parameter name="targetpath" value="C:\Users\Ralph\Desktop\SWE\Projekt\SWE\BIF-SS18-SWE2\deploy" />
+	
+  </TestRunParameters>
+</RunSettings>

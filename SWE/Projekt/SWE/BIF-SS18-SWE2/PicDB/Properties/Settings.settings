@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PicDB.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DALType" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="FilePathLaptop" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Ralph\Desktop\SWE\Projekt\SWE\BIF-SS18-SWE2\deploy\Pictures</Value>
+    </Setting>
+    <Setting Name="Database" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PicDB</Value>
+    </Setting>
+    <Setting Name="Servername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">RALPHSBOOK</Value>
+    </Setting>
+    <Setting Name="FilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Ralph\Desktop\SWE\Projekt\SWE\BIF-SS18-SWE2\deploy\Pictures</Value>
+    </Setting>
+    <Setting Name="ServernamePC" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DESKTOP-COE4AJM</Value>
+    </Setting>
+    <Setting Name="FilePathPC" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\Alfred\Desktop\SWE_Projekt\SWE\BIF-SS18-SWE2\deploy\Pictures</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

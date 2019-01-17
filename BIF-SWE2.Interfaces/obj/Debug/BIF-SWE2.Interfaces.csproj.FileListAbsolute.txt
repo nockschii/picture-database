@@ -1,0 +1,12 @@
+C:\Users\nokz\Desktop\SWE_Projekt\SWE\BIF-SWE2.Interfaces\bin\Debug\BIF-SWE2.Interfaces.dll
+C:\Users\nokz\Desktop\SWE_Projekt\SWE\BIF-SWE2.Interfaces\bin\Debug\BIF-SWE2.Interfaces.pdb
+C:\Users\nokz\Desktop\SWE_Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\nokz\Desktop\SWE_Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\nokz\Desktop\SWE_Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.dll
+C:\Users\nokz\Desktop\SWE_Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.pdb
+C:\Users\Alfred\Desktop\SWE_Projekt\SWE\BIF-SWE2.Interfaces\bin\Debug\BIF-SWE2.Interfaces.dll
+C:\Users\Alfred\Desktop\SWE_Projekt\SWE\BIF-SWE2.Interfaces\bin\Debug\BIF-SWE2.Interfaces.pdb
+C:\Users\Alfred\Desktop\SWE_Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Alfred\Desktop\SWE_Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.dll
+C:\Users\Alfred\Desktop\SWE_Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.pdb
+C:\Users\Alfred\Desktop\SWE_Projekt\SWE\BIF-SWE2.Interfaces\obj\Debug\BIF-SWE2.Interfaces.csprojAssemblyReference.cache
