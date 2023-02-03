@@ -1,4 +1,4 @@
 # PictureDB
-picture manager/viewer
+picture viewer
 
-Projekt unter SWE/Projekt/SWE/BIF-SS18-SWE2
+project for SWE1-BIF-SS18-SWE2
